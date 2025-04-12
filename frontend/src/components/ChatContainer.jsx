@@ -3,8 +3,7 @@ import ChatList from './ChatList'
 import InputText from './InputText'
 import UserLogin from './UserLogin'
 import socketIOclient from 'socket.io-client'
-import {randomAvt} from '../utils/randomAvt'
-
+import { RandomAvt } from '../utils/RandomAvt'
 
 function ChatContainer() {
    const [user, setUser] = React.useState(localStorage.getItem('user') || '')
@@ -29,7 +28,7 @@ function ChatContainer() {
     const newChat = {
       username: localStorage.getItem("user"),
       message: chat,
-      avatar: randomAvt(),
+      avatar: RandomAvt(),
     };
     socketio.emit('newMessage', newChat)
   };

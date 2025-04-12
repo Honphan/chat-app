@@ -1,5 +1,5 @@
 
-export const randomAvt = () => {
+export const RandomAvt = () => {
     const avatars = [
          'https://res.cloudinary.com/dq5jpjdgu/image/upload/v1744458147/avatar-cute/jwtsalfov9jjzxs9xyzv.webp',
          'https://res.cloudinary.com/dq5jpjdgu/image/upload/v1744458136/avatar-cute/ny7l77jbcqr8pvbnbwsi.webp',
