@@ -1,4 +1,5 @@
 import React from 'react'
+import { RandomAvt } from '../utils/RandomAvt'
 
 
 function UserLogin({setUser}) {
@@ -9,7 +10,7 @@ function UserLogin({setUser}) {
         } 
         localStorage.setItem('user', username);
         setUser(username);
-        localStorage.setItem('avatar', 'https://res.cloudinary.com/dq5jpjdgu/image/upload/v1742216164/FILMFLIX/afvg-1742216159028.jpg')
+        localStorage.setItem('avatar', RandomAvt())
     }
   return (
    <>

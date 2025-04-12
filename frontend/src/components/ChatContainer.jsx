@@ -28,7 +28,7 @@ function ChatContainer() {
     const newChat = {
       username: localStorage.getItem("user"),
       message: chat,
-      avatar: RandomAvt(),
+      avatar: localStorage.getItem('avatar'),
     };
     socketio.emit('newMessage', newChat)
   };
