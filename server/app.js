@@ -5,6 +5,7 @@ const Connection = require('./db');
 const app = express();
 const server = http.createServer(app);
 const Chat = require('./model/message');
+const dotenv = require('dotenv').config();
 const io = new Server(server, {
   cors: {
     origin: '*',
@@ -41,8 +42,11 @@ io.on("connection", (socket) => {
   })
 })
 
+app.get('/', (req, res) => {
+    res.send("Hello World!")
+})
 
 
-server.listen(3000, () => {
+server.listen(process.env.PORT, () => {
     console.log('listening on *:3000');
 })
